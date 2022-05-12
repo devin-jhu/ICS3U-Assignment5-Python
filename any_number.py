@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 # Created by Devin Jhu
-# Created on March 2022
-# The area and perimeter calculator
+# Created on May 2022
+# The loop multiplier
 
 
 def main():
-    # this program shows the sum of all numbers from 0 to number
-    counter = 0
-    sum = 0
+    # this program shows the string of number entered
+    HI = 1
+    counter = 1
+    hello_number = HI
 
     # input
     number = input("Enter number (integer): ")
@@ -16,11 +17,12 @@ def main():
     # process & output
     try:
         number_int = int(number)
-        while counter < number_int:
-            sum = sum + (counter + 1)
-            counter = counter + 1
-        print("The sum of all numbers to {0} is {1}".format(number_int, sum))
-
+        if number_int <= 0:
+            print("Not a positive number")
+        else:
+            for counter in range(number_int):
+                hello_number = HI + counter
+                print("HI", end="")
     except Exception:
         print("Not a number.")
     print("\nDone.")

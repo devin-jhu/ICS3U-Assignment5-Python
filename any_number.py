@@ -2,18 +2,16 @@
 
 # Created by Devin Jhu
 # Created on May 2022
-# The loop multiplier
+# The loop string
 
 
 def main():
     # this program shows the string of number entered
-    HI = 1
     counter = 1
-    hello_number = HI
 
     # input
     number = input("Enter number (integer): ")
-
+    string = input("Enter string: ")
     # process & output
     try:
         number_int = int(number)
@@ -21,8 +19,7 @@ def main():
             print("Not a positive number")
         else:
             for counter in range(number_int):
-                hello_number = HI + counter
-                print("HI", end="")
+                print("{0}".format(string), end="")
     except Exception:
         print("Not a number.")
     print("\nDone.")
